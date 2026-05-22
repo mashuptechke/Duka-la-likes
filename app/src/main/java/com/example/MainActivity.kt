@@ -134,6 +134,9 @@ fun MainWrapper() {
               setSupportZoom(true)
               builtInZoomControls = true
               displayZoomControls = false
+              
+              // Remove '; wv' from the user agent to allow Google Login
+              userAgentString = userAgentString.replace("; wv", "")
             }
             webViewClient = object : WebViewClient() {
               override fun onPageFinished(view: WebView?, url: String?) {
