@@ -1,0 +1,6 @@
+{
+  "name": "Duka La Likes",
+  "description": "Mobile wrapper for Duka La Likes web application",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
