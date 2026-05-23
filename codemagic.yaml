@@ -1,0 +1,17 @@
+workflows:
+  android-workflow:
+    name: Build Debug APK
+    max_build_duration: 60
+    environment:
+      vars:
+        GEMINI_API_KEY: $GEMINI_API_KEY
+      java: 17
+    scripts:
+      - name: Create .env file
+        script: echo "GEMINI_API_KEY=$GEMINI_API_KEY" > .env
+      - name: Make Gradle executable
+        script: chmod +x ./gradlew
+      - name: Build Debug APK
+        script: ./gradlew assembleDebug --no-daemon
+    artifacts:
+      - app/build/outputs/apk/debug/*.apk
