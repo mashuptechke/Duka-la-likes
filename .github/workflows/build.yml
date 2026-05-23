@@ -23,7 +23,7 @@ jobs:
         uses: android-actions/setup-android@v3
 
       - name: Create .env file
-        run: echo "GEMINI_API_KEY=${{ AIzaSyBqR0RnhSHTmDgiDO3JYU-b4F0yxcv09sM }}" > .env
+        run: echo "GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}" > .env
 
       - name: Decode debug keystore
         run: |
